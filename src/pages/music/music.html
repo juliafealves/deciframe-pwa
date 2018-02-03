@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Music</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  Acordes escolhidos: {{ciphers}}
+  <ion-card *ngFor="let music of musics" (click)="open(music.url)">
+    <ion-card-header>
+      <ion-icon name="musical-note"></ion-icon>
+      {{music.nome_musica}}
+    </ion-card-header>
+    <ion-card-content>
+      {{music.nome_artista}} <br>
+      <ion-badge item-end>{{music.genero}}</ion-badge>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
