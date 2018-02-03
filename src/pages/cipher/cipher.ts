@@ -19,6 +19,8 @@ export class CipherPage
    */
   public searchMusic()
   {
-    this.navCtrl.push(MusicPage, { ciphers: this.ciphers });
+    if(this.ciphers.length > 0) {
+      this.navCtrl.push(MusicPage, {ciphers: this.ciphers});
+    }
   }
 }
