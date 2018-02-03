@@ -1,15 +1,17 @@
 <script src="cipher.ts"></script>
 <ion-header>
-  <ion-navbar>
-    <ion-title>Cifras</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Escolha suas Cifras</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-  <p>Quais acordes você já sabe tocar?!</p>
-  <ion-tags-input [(ngModel)]="ciphers"  [placeholder]="'Adicione as cifras'"
-                  [mode]="'secondary'" [canBackspaceRemove]="true"></ion-tags-input>
-  <button ion-button full (click)="searchMusic()">Buscar</button>
+  <h4 text-center>Quais acordes você já conhece?!</h4>
+  <ion-tags-input [(ngModel)]="ciphers" [placeholder]="'Adicione'"
+                  [mode]="'purple'" [canBackspaceRemove]="true" margin-bottom>
+  </ion-tags-input>
+  <button margin-top ion-button large full round icon-start color="secondary" (click)="searchMusic()">
+    <ion-icon name="search"></ion-icon>
+    Buscar
+  </button>
 </ion-content>
