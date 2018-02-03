@@ -14,3 +14,86 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.bg-1{ background-color: #EBBB3F; }
+
+ .logo-d,
+ .logo-e1,
+ .logo-c,
+ .logo-i,
+ .logo-dot1,
+ .logo-f,
+ .logo-r,
+ .logo-a,
+ .logo-dot,
+ .logo-m,
+ .logo-e { fill:#FFF; }
+
+.logo-d-color,
+.logo-e1-color { fill:#791459; }
+.logo-c-color,
+.logo-i-color,
+.logo-dot1-color,
+.logo-f-color,
+.logo-r-color,
+.logo-a-color { fill:#9C0A5D; }
+.logo-dot-color,
+.logo-m-color,
+.logo-e-color { fill:#791459; }
+
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 4 1 auto;
+  -ms-flex: 4 1 auto;
+  flex: 4 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 3 1 auto;
+  -ms-flex: 3 1 auto;
+  flex: 3 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.flex-item:nth-child(3) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
