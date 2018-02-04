@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {LoadingController, NavController, NavParams} from 'ionic-angular';
 import { MusicProvider } from "../../providers/music/music";
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'page-music',
@@ -37,7 +38,10 @@ export class MusicPage
       .search(ciphers)
       .subscribe(response =>
       {
-        this.musicSuggestions = response.filter(music => {
+        console.log(typeof response);
+        console.log(response);
+        this.musicSuggestions = response.filter(music =>
+        {
           if (music.diferenca.length == 0){
             return music;
           }

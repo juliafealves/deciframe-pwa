@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class MusicProvider
 {
@@ -10,6 +12,9 @@ export class MusicProvider
 
   public search(ciphers)
   {
-    return this.http.get(MusicProvider.CIFRAME_URI + '?acordes=' + ciphers);
+    return this
+      .http
+      .get(MusicProvider.CIFRAME_URI + '?acordes=' + ciphers)
+      .map(result => <any[]>(result));
   }
 }

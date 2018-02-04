@@ -2,13 +2,11 @@
  * Check out https://googlechromelabs.github.io/sw-toolbox/ for
  * more info on how to use sw-toolbox to custom configure your service worker.
  */
-
-
 'use strict';
 importScripts('./build/sw-toolbox.js');
 
 self.toolbox.options.cache = {
-  name: 'ionic-cache'
+  name: 'deciframe-v1-cache'
 };
 
 // pre-cache our key assets
