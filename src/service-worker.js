@@ -6,7 +6,7 @@
 importScripts('./build/sw-toolbox.js');
 
 self.toolbox.options.cache = {
-  name: 'deciframe-v1-cache'
+  name: 'deciframe-v2-cache'
 };
 
 // pre-cache our key assets
