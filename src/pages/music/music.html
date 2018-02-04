@@ -1,20 +1,36 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Music</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>Músicas Encontradas</ion-title>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-  Acordes escolhidos: {{ciphers}}
+  <p class="text-ios-primary">
+    Acordes escolhidos: <b>{{ciphers}}</b>
+  </p>
+  <ion-card *ngFor="let music of musicSuggestions" (click)="open(music.url)">
+    <ion-card-header>
+      <ion-icon name="musical-note"></ion-icon>
+      {{music.nome_musica}}
+    </ion-card-header>
+    <ion-card-content>
+      Artista: {{music.nome_artista}} <br>
+      <ion-badge item-end>{{music.genero}}</ion-badge>
+    </ion-card-content>
+  </ion-card>
+  <hr>
+  <h5 class="text-ios-secondary">Aprenda mais alguns acordes para tocar:</h5>
   <ion-card *ngFor="let music of musics" (click)="open(music.url)">
     <ion-card-header>
       <ion-icon name="musical-note"></ion-icon>
       {{music.nome_musica}}
     </ion-card-header>
     <ion-card-content>
-      {{music.nome_artista}} <br>
+      Artista: {{music.nome_artista}} <br>
       <ion-badge item-end>{{music.genero}}</ion-badge>
     </ion-card-content>
+    <ion-item-divider>
+      Aprenda esses acordes: <strong>{{music.diferenca}}</strong>
+    </ion-item-divider>
   </ion-card>
 </ion-content>
