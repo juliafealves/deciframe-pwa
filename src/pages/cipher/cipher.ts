@@ -20,7 +20,8 @@ export class CipherPage
   public searchMusic()
   {
     if(this.ciphers.length > 0) {
-      this.navCtrl.push(MusicPage, {ciphers: this.ciphers});
+      const upperCiphers = this.ciphers.map(c => c.toUpperCase());
+      this.navCtrl.push(MusicPage, {ciphers: upperCiphers});
     }
   }
 }
